@@ -1,25 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvdntt8543mwg"]
+[gd_scene load_steps=5 format=3 uid="uid://bvdntt8543mwg"]
 
 [ext_resource type="Shader" path="res://RootScene.gdshader" id="1_dx4a4"]
+[ext_resource type="Texture2D" uid="uid://y5t3ts4v8ai0" path="res://circle.png" id="2_0fgta"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_skeop"]
 shader = ExtResource("1_dx4a4")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_sdxmw"]
+radius = 16.0
+
 [node name="Main Scene" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_scale = 1000.0
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_skeop")
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -0.576
+offset_top = -0.32
+offset_right = -0.57605
+offset_bottom = -0.320007
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_0fgta")
+offset = Vector2(0, -100)
+
+[node name="Area2D" type="Area2D" parent="Player/PlayerSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerSprite/Area2D"]
+shape = SubResource("CircleShape2D_sdxmw")
