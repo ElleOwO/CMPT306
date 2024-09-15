@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://bvdntt8543mwg"]
+[gd_scene load_steps=3 format=3 uid="uid://bvdntt8543mwg"]
+
+[ext_resource type="Shader" path="res://RootScene.gdshader" id="1_dx4a4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_skeop"]
+shader = ExtResource("1_dx4a4")
 
 [node name="Main Scene" type="Node2D"]
 
@@ -11,6 +16,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_skeop")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
