@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvdntt8543mwg"]
+[gd_scene load_steps=6 format=3 uid="uid://bvdntt8543mwg"]
 
 [ext_resource type="Shader" path="res://RootScene.gdshader" id="1_dx4a4"]
 [ext_resource type="Texture2D" uid="uid://y5t3ts4v8ai0" path="res://circle.png" id="2_0fgta"]
+[ext_resource type="Script" path="res://player.gd" id="2_xwdrb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_skeop"]
 shader = ExtResource("1_dx4a4")
@@ -30,6 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Player" type="Node2D" parent="."]
+script = ExtResource("2_xwdrb")
 
 [node name="PlayerSprite" type="Sprite2D" parent="Player"]
 texture = ExtResource("2_0fgta")
