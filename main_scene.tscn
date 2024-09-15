@@ -12,10 +12,11 @@ shader = ExtResource("1_dx4a4")
 [sub_resource type="CircleShape2D" id="CircleShape2D_sdxmw"]
 radius = 16.0
 
-[node name="Main Scene" type="Node2D"]
+[node name="Node" type="Node2D"]
 
 [node name="SpawnManager" type="Node" parent="." node_paths=PackedStringArray("target_node")]
 script = ExtResource("1_d1032")
+obstacle_scene = ExtResource("5_t8w4w")
 target_node = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="."]
