@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvdntt8543mwg"]
+[gd_scene load_steps=9 format=3 uid="uid://bvdntt8543mwg"]
 
 [ext_resource type="Script" path="res://spawn_manager.gd" id="1_d1032"]
 [ext_resource type="Shader" path="res://RootScene.gdshader" id="1_dx4a4"]
 [ext_resource type="Texture2D" uid="uid://y5t3ts4v8ai0" path="res://circle.png" id="2_0fgta"]
 [ext_resource type="Script" path="res://player.gd" id="2_xwdrb"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="3_1k44i"]
 [ext_resource type="PackedScene" uid="uid://d1eovjwnrkfab" path="res://obstacle.tscn" id="5_t8w4w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_skeop"]
@@ -20,6 +21,8 @@ obstacle_scene = ExtResource("5_t8w4w")
 target_node = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
+script = ExtResource("3_1k44i")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
