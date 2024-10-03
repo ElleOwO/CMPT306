@@ -1,0 +1,77 @@
+commit 00b87e5886c887ac8860c2ca485b518ad4ab6e0e
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Thu Sep 19 23:27:47 2024 -0600
+
+    add colourful background
+
+commit ef25bf0a37e29b9039cf9827096cc45a9a918fb5
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Thu Sep 19 23:18:08 2024 -0600
+
+    step 12: Make it Fancy
+
+commit a3bff905290deec41f998d36000b8c904b727051
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Thu Sep 19 23:04:18 2024 -0600
+
+    step 12: Make it Fancy
+
+commit 5ca2bce1e63dcf5074dcd7a3df5debc43fe16f45
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Sun Sep 15 00:18:45 2024 -0600
+
+    step 11: create a challenge
+
+commit c5ff83617b2e8d484c87dcef1aa3cae8fe5de34d
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Sun Sep 15 00:07:02 2024 -0600
+
+    step 10: create a spawner
+
+commit 9e4fe682f47a2ea74888b301628f8dd59a073033
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Sat Sep 14 23:40:57 2024 -0600
+
+    step 8: add an enemy
+
+commit b5b4f2da11bd75728e25b9af337d7c744cab54a3
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Sat Sep 14 23:30:02 2024 -0600
+
+    step 7: add player script
+
+commit 1ddc18f77893506e6aa3c43d8699ada0c0585b84
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Sat Sep 14 23:18:55 2024 -0600
+
+    step 6 :add player and camera
+
+commit 05b3a7b192e770f1a18811aa774f0157012386e7
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Sat Sep 14 22:05:45 2024 -0600
+
+    step 5: colorize the background
+
+commit 7d3bed3dac0a6be5711110afc89f6a2ccffa06ed
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Sat Sep 14 21:50:50 2024 -0600
+
+    step 4: setup background layer
+
+commit f6cdcd17212f6e79aa18c1c52cfa682394150f5a
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Fri Sep 6 20:52:21 2024 -0600
+
+    step 3: created main scene
+
+commit a613e6f70385f2665ae590a18c7dae0bd68d86a5
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Fri Sep 6 20:45:13 2024 -0600
+
+    step 2: created and imported new godot project file into repo.
+
+commit 4fdcd6b9619ae639ed68543cd89119cd1b6001f2
+Author: ElleOwO <lmtdmya@gmail.com>
+Date:   Fri Sep 6 20:37:40 2024 -0600
+
+    step 1: initialize and setup a git repo

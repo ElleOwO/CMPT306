@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvdntt8543mwg"]
+[gd_scene load_steps=12 format=3 uid="uid://bvdntt8543mwg"]
 
 [ext_resource type="Script" path="res://spawn_manager.gd" id="1_d1032"]
 [ext_resource type="Shader" path="res://RootScene.gdshader" id="1_dx4a4"]
@@ -6,14 +6,37 @@
 [ext_resource type="Script" path="res://player.gd" id="2_xwdrb"]
 [ext_resource type="Script" path="res://camera_2d.gd" id="3_1k44i"]
 [ext_resource type="PackedScene" uid="uid://d1eovjwnrkfab" path="res://obstacle.tscn" id="5_t8w4w"]
+[ext_resource type="Texture2D" uid="uid://v1klqldhcpog" path="res://hearts.png" id="8_vvlcv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_skeop"]
 shader = ExtResource("1_dx4a4")
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yuhjq"]
+blend_mode = 2
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_sdxmw"]
 radius = 16.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i3hyp"]
+load_path = "res://.godot/imported/hearts.png-6b96654f92ab629b318fb025dfab89bf.ctex"
+
 [node name="Node" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+scroll_base_scale = Vector2(0, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1600, 80)
+scale = Vector2(2.5, 2.5)
+skew = -0.479966
+motion_scale = Vector2(0.02, 0.02)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-481.179, 129.029)
+scale = Vector2(0.213043, 0.24966)
+skew = 0.432581
+texture = ExtResource("8_vvlcv")
 
 [node name="SpawnManager" type="Node" parent="." node_paths=PackedStringArray("target_node")]
 script = ExtResource("1_d1032")
@@ -25,7 +48,7 @@ ignore_rotation = false
 script = ExtResource("3_1k44i")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
+layer = -2
 follow_viewport_scale = 1000.0
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -44,6 +67,7 @@ grow_vertical = 2
 script = ExtResource("2_xwdrb")
 
 [node name="PlayerSprite" type="Sprite2D" parent="Player"]
+material = SubResource("CanvasItemMaterial_yuhjq")
 texture = ExtResource("2_0fgta")
 offset = Vector2(0, -100)
 
@@ -54,3 +78,8 @@ position = Vector2(0, -100)
 shape = SubResource("CircleShape2D_sdxmw")
 
 [node name="Obstacle" parent="." instance=ExtResource("5_t8w4w")]
+
+[node name="Hearts" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(360, 512)
+texture = SubResource("CompressedTexture2D_i3hyp")
